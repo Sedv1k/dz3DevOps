@@ -1,0 +1,13 @@
+name: action1
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  myTest:
+    runs-on: windows-latest
+
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello, World! from myTest job"
