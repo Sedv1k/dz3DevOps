@@ -30,8 +30,20 @@ jobs:
   myDeploy:
     runs-on: windows-latest
   #  needs: [myTest]
+    env:
+      VAR1 : "This is Job Level Variable_1"
+      VAR2 : "This is Job Level Variable_2"
+
 
     steps:
+    - name: Print env Vars
+      run: |
+        echo "Var1 = ${{ env.VAR1 }}"
+        echo "Var2 = ${{ env.VAR2 }}"
+        echo "Var3 = $LOCAL_STEP_VAR
+      env:
+       LOCAL_STEP_VAR : "This is Super local Env Variable"
+       
     - name: Print Hello Message
       run: echo "Hello, World! from myDeploy job"
       
