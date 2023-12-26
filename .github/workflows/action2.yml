@@ -19,6 +19,9 @@ jobs:
 
     - name: List current folder
       run: dir
+      
+    - name: Git clone my repo
+      uses: actions/checkout@v1
 
   myDeploy:
     runs-on: windows-latest
