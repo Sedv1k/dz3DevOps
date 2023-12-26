@@ -16,11 +16,11 @@ jobs:
       run: echo "Hello, World! from myTest job"
 
     - name: Execute few commands
-      run: 
+      run: |
         echo "Hello Message 1"
         echo "Hello Message 2"
         echo "Application name: ${{ env.APPLICATION_NAME }}"
-
+           
     - name: List current folder
       run: dir
       
