@@ -29,11 +29,14 @@ jobs:
 
   myDeploy:
     runs-on: windows-latest
-    needs: [myTest]
+  #  needs: [myTest]
 
     steps:
     - name: Print Hello Message
       run: echo "Hello, World! from myDeploy job"
-
+      
+    - name: Test Aws Version
+      run: aws --version
+      
     - name: Printing Deployment Package
       run: echo "Deployment Package Name is ${{ env.DEPLOY_PACKAGE_NAME }}"
