@@ -14,6 +14,7 @@ jobs:
 
   myDeploy:
     runs-on: windows-latest
+    needs: [myTest]
 
     steps:
     - name: Print Hello Message
