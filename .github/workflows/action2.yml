@@ -12,6 +12,14 @@ jobs:
     - name: Print Hello Message
       run: echo "Hello, World! from myTest job"
 
+    - name: Execute few commands
+      run: 
+        echo "Hello Message 1"
+        echo "Hello Message 2"
+
+    - name: List current folder
+      run: dir
+
   myDeploy:
     runs-on: windows-latest
     needs: [myTest]
